@@ -8,20 +8,20 @@
 
 ## Progress Journal
 
-| # | Topic | Status | Notebook |
-|---|-------|--------|----------|
-| 1 | NumPy Basics — Array Operations | ⬜ Not started | [01_array_operations](notebooks/01_numpy_basics/01_array_operations.ipynb) |
-| 2 | NumPy — Linear Algebra for ML | ⬜ Not started | [02_linear_algebra_for_ml](notebooks/01_numpy_basics/02_linear_algebra_for_ml.ipynb) |
-| 3 | Matplotlib — Data Visualization | ⬜ Not started | [01_data_visualization](notebooks/02_matplotlib_basics/01_data_visualization.ipynb) |
-| 4 | Linear Regression — Math Foundations | ⬜ Not started | [01_math_foundations](notebooks/03_linear_regression/01_math_foundations.ipynb) |
-| 5 | Linear Regression — From Scratch (NumPy) | ⬜ Not started | [02_from_scratch_numpy](notebooks/03_linear_regression/02_from_scratch_numpy.ipynb) |
-| 6 | Linear Regression — scikit-learn | ⬜ Not started | [03_sklearn_implementation](notebooks/03_linear_regression/03_sklearn_implementation.ipynb) |
-| 7 | Linear Regression — Kaggle: World Happiness | ⬜ Not started | [04_kaggle_world_happiness](notebooks/03_linear_regression/04_kaggle_world_happiness.ipynb) |
-| 8 | Gradient Descent — Math Intuition | ⬜ Not started | [01_math_intuition](notebooks/04_gradient_descent/01_math_intuition.ipynb) |
-| 9 | Gradient Descent — From Scratch (NumPy) | ⬜ Not started | [02_implementation_from_scratch](notebooks/04_gradient_descent/02_implementation_from_scratch.ipynb) |
-| 10 | Logistic Regression — Math Foundations | ⬜ Not started | [01_math_foundations](notebooks/05_logistic_regression/01_math_foundations.ipynb) |
-| 11 | Logistic Regression — From Scratch (NumPy) | ⬜ Not started | [02_from_scratch_numpy](notebooks/05_logistic_regression/02_from_scratch_numpy.ipynb) |
-| 12 | Logistic Regression — Kaggle: Breast Cancer | ⬜ Not started | [03_kaggle_breast_cancer](notebooks/05_logistic_regression/03_kaggle_breast_cancer.ipynb) |
+| # | Topic | Notebook |
+|---|-------|----------|
+| 1 | NumPy Basics — Array Operations | [01_array_operations](notebooks/01_numpy_basics/01_array_operations.ipynb) |
+| 2 | NumPy — Linear Algebra for ML | [02_linear_algebra_for_ml](notebooks/01_numpy_basics/02_linear_algebra_for_ml.ipynb) |
+| 3 | Matplotlib — Data Visualization | [01_data_visualization](notebooks/02_matplotlib_basics/01_data_visualization.ipynb) |
+| 4 | Linear Regression — Math Foundations | [01_math_foundations](notebooks/03_linear_regression/01_math_foundations.ipynb) |
+| 5 | Linear Regression — From Scratch (NumPy) | [02_from_scratch_numpy](notebooks/03_linear_regression/02_from_scratch_numpy.ipynb) |
+| 6 | Linear Regression — scikit-learn | [03_sklearn_implementation](notebooks/03_linear_regression/03_sklearn_implementation.ipynb) |
+| 7 | Linear Regression — Kaggle: World Happiness | [04_kaggle_world_happiness](notebooks/03_linear_regression/04_kaggle_world_happiness.ipynb) |
+| 8 | Gradient Descent — Math Intuition | [01_math_intuition](notebooks/04_gradient_descent/01_math_intuition.ipynb) |
+| 9 | Gradient Descent — From Scratch (NumPy) | [02_implementation_from_scratch](notebooks/04_gradient_descent/02_implementation_from_scratch.ipynb) |
+| 10 | Logistic Regression — Math Foundations | [01_math_foundations](notebooks/05_logistic_regression/01_math_foundations.ipynb) |
+| 11 | Logistic Regression — From Scratch (NumPy) | [02_from_scratch_numpy](notebooks/05_logistic_regression/02_from_scratch_numpy.ipynb) |
+| 12 | Logistic Regression — Kaggle: Breast Cancer | [03_kaggle_breast_cancer](notebooks/05_logistic_regression/03_kaggle_breast_cancer.ipynb) |
 
 ---
 
