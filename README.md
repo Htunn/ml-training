@@ -95,9 +95,61 @@ jupyter lab
 
 ---
 
-## Why conda-forge for Apple M3 Pro?
+## Why conda + JupyterLab for Machine Learning?
 
-`conda-forge` provides pre-compiled ARM64 packages that link against **Apple's Accelerate framework** (BLAS/LAPACK). This gives numpy and scipy near-Metal performance on matrix operations without any extra configuration.
+### The ML Tooling Stack
+
+```mermaid
+flowchart TD
+    A[Your ML Project] --> B[conda Environment]
+    B --> C[Isolated Python + Packages]
+    C --> D[NumPy / SciPy\nlinked to Apple Accelerate]
+    C --> E[scikit-learn\nclassical ML algorithms]
+    C --> F[Matplotlib / Seaborn\nvisualization]
+    A --> G[JupyterLab]
+    G --> H[Interactive Notebooks]
+    H --> I[Write math → Run code\n→ See plots instantly]
+    H --> J[Share results on GitHub\nwith rendered outputs]
+    B --> K{Hardware}
+    K -->|Apple M3 Pro| L[ARM64-native binaries\nApple Accelerate BLAS/LAPACK]
+    K -->|Intel / AMD| M[Standard x86-64 binaries]
+```
+
+### Why conda?
+
+**Problem:** ML projects depend on large C-extension packages (NumPy, SciPy, scikit-learn) that must be compiled against specific hardware and OS ABI. `pip` alone can't resolve binary compatibility across platforms.
+
+**Solution:** conda manages both Python packages *and* native system libraries as a single unit.
+
+| Concern | pip | conda |
+|---------|-----|-------|
+| Isolates Python version per project | via venv | built-in |
+| Installs pre-compiled C/Fortran binaries | sometimes | always |
+| Manages non-Python dependencies (BLAS, HDF5) | no | yes |
+| ARM64-native packages for Apple Silicon | limited | conda-forge |
+| Reproducible environment file | requirements.txt | environment.yml |
+
+On Apple M3 Pro specifically, `conda-forge` ships ARM64-native builds of NumPy and SciPy linked against **Apple's Accelerate framework** (BLAS/LAPACK), giving near-Metal performance on matrix operations with zero extra configuration.
+
+### Why JupyterLab?
+
+Machine learning is inherently **exploratory** — you form a hypothesis, test it, visualise the result, and iterate. JupyterLab's notebook format is designed exactly for this loop:
+
+```mermaid
+flowchart LR
+    A[Write equation\nor hypothesis] --> B[Code it in Python]
+    B --> C[Run cell\nsee output instantly]
+    C --> D{Result OK?}
+    D -- No --> A
+    D -- Yes --> E[Embed plot + explanation\nas markdown]
+    E --> F[Commit notebook\nwith saved outputs]
+    F --> G[GitHub renders\nfull report]
+```
+
+- **Math + code together** — write $\theta = (X^TX)^{-1}X^Ty$ in Markdown then implement it in the next cell
+- **Incremental execution** — run one cell at a time; no need to re-run the entire script
+- **Inline visualisation** — plots appear immediately below the code that generates them
+- **Shareable reports** — notebooks committed with cell outputs render fully on GitHub
 
 > **Note on GPU usage:**
 > scikit-learn is **CPU-only** by design — ideal for classical ML algorithms.
